@@ -1,0 +1,325 @@
+/* Base */
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Tahoma,Arial,sans-serif;color:#fff}
+
+/* Cada pantalla (view) - por defecto OCULTA */
+.view{
+  display:none;
+  min-height:100vh;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:40px;
+}
+.view.active{ display:flex; }
+.center{max-width:980px;margin:0 auto}
+
+/* Fondos azules */
+#home{background:linear-gradient(135deg,#1e40af 0%, #3b82f6 100%)}
+#catalogo,#servicios,#contacto,#info,#siemens,#allen,#schneider,#mitsubishi,#omron,#abb{
+  background:linear-gradient(135deg,#3b82f6 0%, #1e40af 100%)
+}
+
+/* Titulares y textos */
+h1,h2{margin:0 0 14px}
+p{margin:0 0 10px;opacity:.95}
+
+/* Botones */
+.menu-buttons{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:20px}
+.menu-btn,.brand-btn,.back-btn{
+  background:#ffffff;color:#1e3a8a;border:none;border-radius:12px;
+  padding:14px 24px;font-size:1.05rem;font-weight:700;cursor:pointer;
+  transition:transform .18s ease, box-shadow .2s ease, background .2s ease
+}
+.menu-btn:hover,.brand-btn:hover,.back-btn:hover{
+  background:#f3f4f6;transform:translateY(-2px);box-shadow:0 10px 22px rgba(0,0,0,.18)
+}
+.back-btn{margin-top:22px;background:#e5e7eb;color:#111827}
+.back-btn:hover{background:#d1d5db}
+
+/* Productos y tarjetas */
+.products-grid,.cards-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;margin-top:18px;text-align:left
+}
+.product-card,.card{
+  background:#ffffff;color:#111827;padding:16px;border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);border:1px solid #e5e7eb
+}
+.product-card h3{margin:0 0 6px}
+.product-card span{color:#059669;font-weight:800}
+
+/* Footer */
+.footer{background:#0b1220;color:#cbd5e1;text-align:center;padding:16px}
+
+
+/* === FONDOS DE SECCIONES === */
+
+/* Fondo del menú principal */
+#home {
+  background: url('../img/menu-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#home .center {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo del catálogo general */
+#catalogo {
+  background: url('../img/menu-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#catalogo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#catalogo .center {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondos de marcas específicas */
+#siemens {
+  background: url('../img/siemens-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#siemens::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#siemens .center {
+  position: relative;
+  z-index: 2;
+}
+
+#allen {
+  background: url('../img/allen-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#allen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#allen .center {
+  position: relative;
+  z-index: 2;
+}
+
+#schneider {
+  background: url('../img/schneider-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#schneider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#schneider .center {
+  position: relative;
+  z-index: 2;
+}
+
+#mitsubishi {
+  background: url('../img/mitsubishi-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#mitsubishi::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#mitsubishi .center {
+  position: relative;
+  z-index: 2;
+}
+
+#omron {
+  background: url('../img/omron-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#omron::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#omron .center {
+  position: relative;
+  z-index: 2;
+}
+
+#abb {
+  background: url('../img/abb-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#abb::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#abb .center {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo de servicios */
+#servicios {
+  background: url('../img/servicios-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#servicios::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#servicios .center {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo de contacto */
+#contacto {
+  background: url('../img/contacto-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#contacto::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#contacto .center {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo sobre nosotros */
+#info {
+  background: url('../img/nosotros-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+#info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#info .center {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Botón volver al menú fijo arriba izq */
+.back-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
